@@ -1,0 +1,84 @@
+*
+{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+/*for body*/
+body
+{
+      background-color: #7adfff;
+}
+/*for container*/
+.container
+{
+      max-width: 1200px;
+      min-height: 800px;
+      margin: 52px auto;
+      padding: 0 16px;
+}
+/*for grid*/
+.grid
+{
+      display: grid;
+      gap: 20px;
+      grid-template-areas: 
+      "box1 box1 box1 box3"
+      "box2 box2 box2 box3"
+      "box2 box2 box2 box3";
+}
+/*for box1*/
+.box1
+   {
+    grid-area: box1;
+    background: #4f8eec;
+  }
+  /*for box2*/
+  .box2
+   {
+    grid-area: box2;
+    background: #0a1e3c;
+  }
+  /*for box3*/
+  .box3
+   {
+    grid-area: box3;
+    background: #005c79;
+  }
+  /*for scree display width > 1200px*/
+  @media screen and (width > 1200px)
+   {
+  }
+    /*for scree display width < 1200px and > 450px*/
+    @media screen and (width < 1200px) and (width > 450px)
+    {
+      /*for grid*/
+      .grid
+      {
+            gap: 16px;
+      }
+    }
+      /*for scree display width < 450px*/
+      @media screen and (width < 450px)
+      {
+            /*for container*/
+            .container
+            {
+                  margin: 24px auto;
+            }
+            /*for grid*/
+            .grid
+            {
+                  gap: 16px;
+                  grid-template-areas: 
+                  "box1"
+                  "box1"
+                  "box2"
+                  "box2"
+                  "box2"
+                  "box2"
+                  "box3"
+                  "box3"
+                  "box3";
+            }
+      }
